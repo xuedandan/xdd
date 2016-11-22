@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script>
+
+window.onload = function(){
+	var oA = document.getElementById('a1');
+	
+	/*setInterval(function(){
+		
+		console.log(oA.currentTime);
+		
+	},1000);*/
+	
+	//oA.currentTime = 60;
+	
+	console.log( oA.duration );   /*长度 s为单位*/
+	console.log( oA.volume );		/*属性设置或返回音频/视频的当前音量。*/
+	
+	console.log( oA.muted );  /*muted 属性属于逻辑属性。
+当设置该属性后，它规定视频的音频输出应该被静音*/
+	
+	console.log( oA.paused );  /*paused 属性返回音频/视频是否已暂停。*/
+	console.log( oA.ended );   /*ended 属性返回音频/视频是否已结束。*/
+	console.log( oA.error );    /*返回音频的错误状态*/
+	// 1 = MEDIA_ERR_ABORTED - 取回过程被用户中止
+	// 2 = MEDIA_ERR_NETWORK - 当下载时发生错误
+	// 3 = MEDIA_ERR_DECODE - 当解码时发生错误
+	// 4 = MEDIA_ERR_SRC_NOT_SUPPORTED - 不支持音频/视频
+	console.log( oA.currentSrc );   /*返回当前视频的url*/
+	  
+};
+
+</script>
+</head>
+
+<body>
+<audio id="a1" controls='controls' src="../johann_sebastian_bach_air.mp3"></audio>   <!-- 音频 -->
+<!-- control 提供属性添加播放、暂停和音量控件 -->
+</body>
+</html>
